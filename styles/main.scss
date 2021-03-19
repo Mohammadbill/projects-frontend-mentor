@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&display=swap");
+
+$font-color: hsl(0, 0%, 59%);
+$cyan-background: hsl(185, 75%, 39%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: $cyan-background;
+
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position-x: -2em, 55em;
+  background-position-y: -45vh, 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  position: fixed;
+  width: 22.5em;
+  height: 45%;
+  background-color: whitesmoke;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10%;
+  overflow: hidden;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  .container {
+    z-index: 1;
+    width: 100%;
+    font-weight: 400;
+    color: $font-color;
+    span {
+      font-weight: 700;
+      color: black;
+    }
+  }
+
+  .top {
+    background: url(../images/bg-pattern-card.svg);
+    height: 30%;
+    width: 100%;
+    background-color: #e28743;
+  }
+
+  .middle {
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      border-radius: 100%;
+      border: 0.4em whitesmoke solid;
+      margin-top: -6em;
+      width: 35%;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: -1rem;
+      margin-top: -2rem;
+      span {
+        padding-right: 0.5rem;
+      }
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-top: -2rem;
+      span {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  .bottom {
+    border-top: 2px solid lightgray;
+    height: 25%;
+  }
+
+  ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; /* align horizontal */
+    align-items: center; /* align vertical */
+
+    li {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      span {
+        letter-spacing: normal;
+        font-size: 1.35rem;
+        display: block;
+        margin: 0.5em 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 2em;
+  color: whitesmoke;
+
+  p {
+    display: inline-flex;
+    padding: 0 1em;
+    text-align: center;
+  }
+  a {
+    padding-left: 0.3rem;
+    color: white;
+    font-weight: 700;
+
+    &:hover {
+      //   color: lightgray;
+      text-decoration: none;
+    }
+  }
+}
