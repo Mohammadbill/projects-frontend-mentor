@@ -9,14 +9,7 @@
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
   font-family: "Kumbh Sans", sans-serif;
-  background-color: #19a2ae;
-  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
-  background-repeat: no-repeat;
-  background-position-x: -2em, 55em;
-  background-position-y: -45vh, 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,10 +21,18 @@ body {
           align-items: center;
 }
 
+.background-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position-x: -2vw, 55vw;
+  background-position-y: -45vh, 60vh;
+  background-color: #19a2ae;
+}
+
 .component {
   position: fixed;
-  width: 22.5em;
-  height: 45%;
   background-color: whitesmoke;
   text-align: center;
   -webkit-box-pack: center;
@@ -47,9 +48,7 @@ body {
 }
 
 .component .container {
-  z-index: 1;
-  width: 100%;
-  font-weight: 400;
+  width: 22.5rem;
   color: #969696;
 }
 
@@ -60,13 +59,11 @@ body {
 
 .component .top {
   background: url(../images/bg-pattern-card.svg);
-  height: 30%;
-  width: 100%;
-  background-color: #e28743;
+  height: 10rem;
 }
 
 .component .middle {
-  height: 45%;
+  padding: 5rem 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,33 +81,30 @@ body {
 .component .middle img {
   border-radius: 100%;
   border: 0.4em whitesmoke solid;
-  margin-top: -6em;
-  width: 35%;
+  margin: -9em 0 1rem 0;
+  width: 7.5rem;
 }
 
 .component .middle h1 {
-  font-size: 1.5rem;
-  margin-bottom: -1rem;
-  margin-top: -2rem;
+  margin-bottom: 1rem;
+  color: black;
 }
 
 .component .middle h1 span {
-  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-weight: normal;
+  color: #969696;
 }
 
 .component .middle h2 {
   font-size: 1rem;
   font-weight: normal;
-  margin-top: -2rem;
-}
-
-.component .middle h2 span {
-  padding-left: 0.5rem;
+  margin: 0 0 2rem 0;
 }
 
 .component .bottom {
-  border-top: 2px solid lightgray;
-  height: 25%;
+  border-top: 1px solid lightgray;
+  height: 7rem;
 }
 
 .component ul {
@@ -147,6 +141,8 @@ body {
   bottom: 0;
   margin-bottom: 2em;
   color: whitesmoke;
+  text-align: center;
+  line-height: 1.5rem;
 }
 
 .attribution p {
@@ -154,7 +150,6 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0 1em;
-  text-align: center;
 }
 
 .attribution a {
