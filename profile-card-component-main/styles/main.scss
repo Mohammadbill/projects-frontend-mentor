@@ -12,37 +12,40 @@ $cyan-background: hsl(185, 75%, 39%);
 }
 
 body {
+  height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
+  position: relative;
+
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-color: $cyan-background;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 45vh, left 50vw top 50vh;
+
+  background-size: auto;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.background-container {
-  min-height: 100vh;
-  min-width: 100vw;
-  background-image: url("../images/bg-pattern-top.svg"),
-    url("../images/bg-pattern-bottom.svg");
-  background-repeat: no-repeat;
-  background-position-x: -2vw, 55vw;
-  background-position-y: -45vh, 60vh;
-  background-color: $cyan-background;
-}
-
 .component {
-  position: fixed;
-  background-color: whitesmoke;
+  width: 100%;
   text-align: center;
-  justify-content: center;
-  border-radius: 10%;
-  overflow: hidden;
-  display: flex;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2em;
+  width: 100%;
 
   .container {
-    width: 22.5rem;
+    max-width: 25em;
+    margin: auto;
+    background-color: whitesmoke;
     color: $font-color;
+    border-radius: 4%;
+    box-shadow: rgba(0, 0, 0, 0.32) 20px 20px 200px;
+
+    overflow: hidden;
+
     span {
       font-weight: 700;
       color: black;
@@ -51,26 +54,22 @@ body {
 
   .top {
     background: url(../images/bg-pattern-card.svg);
-    height: 10rem;
+    height: 9em;
+    padding: auto;
   }
 
   .middle {
-    padding: 5rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
     img {
       border-radius: 100%;
       border: 0.4em whitesmoke solid;
-      margin: -9em 0 1rem 0;
+      margin: -4em 0 1rem 0;
       width: 7.5rem;
     }
 
     h1 {
       margin-bottom: 1rem;
       color: black;
+      font-size: 1.3rem;
       span {
         padding-left: 0.5rem;
         font-weight: normal;
@@ -99,6 +98,8 @@ body {
     li {
       font-size: 0.75rem;
       letter-spacing: 0.2em;
+      padding: 0 1em;
+      display: block;
       span {
         letter-spacing: normal;
         font-size: 1.35rem;
@@ -111,16 +112,20 @@ body {
 }
 
 .attribution {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  margin-bottom: 2em;
   color: whitesmoke;
   text-align: center;
   line-height: 1.5rem;
 
-  p {
-    display: inline-flex;
-    padding: 0 1em;
+  ul {
+    margin-bottom: 1em;
+    list-style: none;
+
+    li {
+      padding: 0 1em;
+      display: inline-block;
+    }
   }
   a {
     padding-left: 0.3rem;
