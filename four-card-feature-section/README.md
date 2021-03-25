@@ -56,5 +56,5 @@ Aside from that this was just a good way to practice on the fundamentals and bui
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/fraserwat)
+- Frontend Mentor - [@fraserwat](https://www.frontendmentor.io/profile/fraserwat)
 - Twitter - [@fsrtweet](https://www.twitter.com/fsrtweet)
