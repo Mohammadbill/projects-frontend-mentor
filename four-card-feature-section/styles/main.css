@@ -12,6 +12,7 @@ body {
   font-family: "Poppins";
   background-color: #fafafa;
   color: #4c4e61;
+  padding: 0 1em;
 }
 
 body p {
@@ -234,13 +235,13 @@ header p {
 
 footer {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   color: #a3a5ae;
   text-align: center;
   line-height: 2em;
   margin-bottom: 2em;
-  margin-top: 2em;
+  padding-top: 2em;
 }
 
 footer li {

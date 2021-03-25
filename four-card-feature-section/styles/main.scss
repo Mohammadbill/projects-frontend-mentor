@@ -30,6 +30,7 @@ body {
   font-family: "Poppins";
   background-color: $light-blue;
   color: $dark-blue;
+  padding: 0 1em;
   p {
     font-size: 15px;
   }
@@ -173,13 +174,13 @@ header {
 
 footer {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   color: $grey-blue;
   text-align: center;
   line-height: 2em;
   margin-bottom: 2em;
-  margin-top: 2em;
+  padding-top: 2em;
   li {
     list-style: none;
     display: inline-block;
