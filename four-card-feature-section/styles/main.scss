@@ -30,6 +30,9 @@ body {
   font-family: "Poppins";
   background-color: $light-blue;
   color: $dark-blue;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 0 1em;
   p {
     font-size: 15px;
@@ -65,19 +68,26 @@ header {
   display: grid;
   margin: auto;
   @media only screen and (max-width: $phone) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+      "supervisor"
+      "teambuilder"
+      "karma"
+      "calculator";
   }
 
   @media only screen and (min-width: $tablet) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "supervisor teambuilder"
+      "karma calculator";
     max-width: $tablet;
   }
 
   @media only screen and (min-width: $desktop) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      ". teambuilder ."
+      "supervisor teambuilder calculator"
+      "supervisor karma calculator"
+      ". karma .";
     max-width: $desktop;
   }
 
@@ -109,73 +119,28 @@ header {
     }
   }
 
-  #supervisor {
+  li:nth-child(1) {
     @include feature-border($cyan);
-    @media only screen and (max-width: $phone) {
-      grid-column: 1;
-      grid-row: 1;
-    }
-    @media only screen and (min-width: $tablet) {
-      grid-column: 1;
-      grid-row: 1;
-    }
-    @media only screen and (min-width: $desktop) {
-      grid-column: 1;
-      grid-row: 2/4;
-    }
+    grid-area: supervisor;
   }
 
-  #team-builder {
+  li:nth-child(2) {
     @include feature-border($red);
-    @media only screen and (max-width: $phone) {
-      grid-column: 1;
-      grid-row: 2;
-    }
-    @media only screen and (min-width: $tablet) {
-      grid-column: 2;
-      grid-row: 1;
-    }
-    @media only screen and (min-width: $desktop) {
-      grid-column: 2;
-      grid-row: 1/3;
-    }
+    grid-area: teambuilder;
   }
-  #karma {
+  li:nth-child(3) {
     @include feature-border($orange);
-    @media only screen and (max-width: $phone) {
-      grid-column: 1;
-      grid-row: 3;
-    }
-    @media only screen and (min-width: $tablet) {
-      grid-column: 1;
-      grid-row: 2;
-    }
-    @media only screen and (min-width: $desktop) {
-      grid-column: 2;
-      grid-row: 3/5;
-    }
+    grid-area: karma;
   }
-  #calculator {
+  li:nth-child(4) {
     @include feature-border($blue);
-    @media only screen and (max-width: $phone) {
-      grid-column: 1;
-      grid-row: 4;
-    }
-    @media only screen and (min-width: $tablet) {
-      grid-column: 2;
-      grid-row: 2;
-    }
-    @media only screen and (min-width: $desktop) {
-      grid-column: 3;
-      grid-row: 2/4;
-    }
+    grid-area: calculator;
   }
 }
 
 footer {
-  width: 100%;
   position: relative;
-  bottom: 0;
+  margin: auto 0;
   color: $grey-blue;
   text-align: center;
   line-height: 2em;
