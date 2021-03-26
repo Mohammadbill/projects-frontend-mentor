@@ -55,7 +55,7 @@ header p {
   margin: auto;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
   .feature-list {
         grid-template-areas: "supervisor" "teambuilder" "karma" "calculator";
   }
@@ -63,7 +63,7 @@ header p {
 
 @media only screen and (min-width: 768px) {
   .feature-list {
-        grid-template-areas: "supervisor teambuilder" "karma calculator";
+        grid-template-areas: "supervisor teambuilder" "calculator karma";
     max-width: 768px;
   }
 }

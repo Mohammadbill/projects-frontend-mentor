@@ -13,7 +13,6 @@ $light-blue: hsl(0, 0%, 98%);
 $shadow: rgba(76, 78, 150, 0.12);
 
 // media query vars
-$phone: 640px;
 $tablet: 768px;
 $desktop: 1050px;
 
@@ -67,7 +66,8 @@ header {
   }
   display: grid;
   margin: auto;
-  @media only screen and (max-width: $phone) {
+  @media only screen and (max-width: $tablet) {
+    // anything smaller than tablet is phone
     grid-template-areas:
       "supervisor"
       "teambuilder"
@@ -78,7 +78,7 @@ header {
   @media only screen and (min-width: $tablet) {
     grid-template-areas:
       "supervisor teambuilder"
-      "karma calculator";
+      "calculator karma";
     max-width: $tablet;
   }
 
