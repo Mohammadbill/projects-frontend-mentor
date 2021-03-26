@@ -1,0 +1,83 @@
+@import url("../styles/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  font-family: "Karla", "sans-serif";
+  background-color: #e5eff5;
+  font-size: 16px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+        grid-template-areas: "top-box" "left-box" "right-box";
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .container {
+        grid-template-areas: "top-box top-box" "left-box right-box";
+  }
+}
+
+.container .top {
+  grid-area: top-box;
+  background-color: white;
+  padding: 1rem;
+}
+
+.container .top h1 {
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: #2ab2af;
+}
+
+.container .top h2 {
+  margin: 1rem;
+  font-size: 1rem;
+  color: #c0df34;
+}
+
+.container .top p {
+  margin: 1rem;
+  color: #b1c2cd;
+}
+
+.container .middle {
+  grid-area: left-box;
+  background-color: #2ab2af;
+  color: white;
+}
+
+.container .middle .price-point span {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.25em;
+}
+
+.container .middle input[type="button"] {
+  background-color: #c0df34;
+  color: white;
+  border: none;
+  border-radius: 2%;
+}
+
+.container .bottom {
+  grid-area: right-box;
+  padding: 1rem;
+  background-color: #2dbebc;
+}
+
+.container .bottom h2 {
+  margin: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.container .bottom ul {
+  list-style: none;
+}
+/*# sourceMappingURL=main.css.map */

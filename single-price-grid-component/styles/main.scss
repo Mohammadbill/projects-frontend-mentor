@@ -1,0 +1,92 @@
+// CSS Reset
+@import url("../styles/reset.css");
+
+// Layout
+$mobile-breakpoint: 375px;
+$font-size: 16px;
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+// Colors
+$cyan: hsl(179, 62%, 43%);
+$cyan-lighter: hsl(179, 62%, 46%);
+$bright-yellow: hsl(71, 73%, 54%);
+
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+$dark-grey: hsl(204, 22%, 75%);
+
+body {
+  font-family: "Karla", "sans-serif";
+  background-color: $light-gray;
+  font-size: $font-size;
+}
+
+.container {
+  display: grid;
+  @media only screen and (max-width: $mobile-breakpoint) {
+    grid-template-areas:
+      "top-box"
+      "left-box"
+      "right-box";
+  }
+  @media only screen and (min-width: $mobile-breakpoint) {
+    grid-template-areas:
+      "top-box top-box"
+      "left-box right-box";
+  }
+
+  .top {
+    grid-area: top-box;
+    background-color: white;
+    padding: 1rem;
+    h1 {
+      margin: 1rem;
+      font-size: 1.5rem;
+      color: $cyan;
+    }
+    h2 {
+      margin: 1rem;
+      font-size: 1rem;
+      color: $bright-yellow;
+    }
+    p {
+      margin: 1rem;
+      color: $dark-grey;
+    }
+  }
+  .middle {
+    grid-area: left-box;
+    background-color: $cyan;
+    color: white;
+
+    .price-point {
+      span {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-right: 0.25em;
+      }
+      //   color: $light-gray;
+    }
+
+    input[type="button"] {
+      background-color: $bright-yellow;
+      color: white;
+      border: none;
+      border-radius: 2%;
+    }
+  }
+
+  .bottom {
+    grid-area: right-box;
+    padding: 1rem;
+    background-color: $cyan-lighter;
+    h2 {
+      margin: 1rem;
+      color: white;
+      font-size: 1.5rem;
+    }
+    ul {
+      list-style: none;
+    }
+  }
+}
