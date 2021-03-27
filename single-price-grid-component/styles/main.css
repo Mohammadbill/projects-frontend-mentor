@@ -57,7 +57,7 @@ body {
 }
 
 .container .top h2 {
-  margin: 0 1rem;
+  margin: 0 1rem 1rem 1rem;
   font-size: 1rem;
   color: white;
   color: #c0df34;
@@ -77,7 +77,7 @@ body {
 }
 
 .container .middle h2 {
-  margin: 0 1rem;
+  margin: 0 1rem 1rem 1rem;
   font-size: 1rem;
   color: white;
 }
@@ -135,7 +135,7 @@ body {
 }
 
 .container .bottom h2 {
-  margin: 0 1rem;
+  margin: 0 1rem 1rem 1rem;
   font-size: 1rem;
   color: white;
 }
