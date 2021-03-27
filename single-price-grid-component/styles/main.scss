@@ -12,7 +12,6 @@ $cyan-lighter: hsl(179, 62%, 50%);
 $bright-yellow: hsl(71, 73%, 54%);
 
 $light-gray: hsl(204, 43%, 93%);
-$grayish-blue: hsl(218, 22%, 67%);
 $dark-grey: hsl(204, 22%, 75%);
 
 :root {
@@ -23,8 +22,8 @@ $dark-grey: hsl(204, 22%, 75%);
 }
 
 body {
-  padding-top: 1em;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 2em;
   display: flex;
   flex-direction: column;
 }
@@ -43,116 +42,115 @@ body {
   overflow: hidden;
   box-shadow: 1px 1px 5px 6px rgba(0, 0, 0, 0.04);
 
-  @media only screen and (max-width: $mobile-breakpoint) {
-    grid-template-areas:
-      "top-box"
-      "left-box"
-      "right-box";
-  }
+  grid-template-areas:
+    "top-box"
+    "left-box"
+    "right-box";
+
   @media only screen and (min-width: $mobile-breakpoint) {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas:
       "top-box top-box"
       "left-box right-box";
   }
+}
 
-  .top {
-    grid-area: top-box;
-    background-color: white;
-    padding: 1rem;
-    h1 {
-      margin: 1rem;
-      font-size: 1.5rem;
-      color: $cyan;
-    }
-    h2 {
-      @include section-header();
-      color: $bright-yellow;
-    }
-    p {
-      margin: 1rem;
-      color: $dark-grey;
-      line-height: 1.5rem;
+.top {
+  grid-area: top-box;
+  background-color: white;
+  padding: 1rem;
+  h1 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: $cyan;
+  }
+  h2 {
+    @include section-header();
+    color: $bright-yellow;
+  }
+  p {
+    margin: 1rem;
+    color: $dark-grey;
+    line-height: 1.5rem;
+  }
+}
+.middle {
+  grid-area: left-box;
+  background-color: $cyan;
+  color: white;
+  padding: 1rem;
+  padding-right: 1em;
+  background-clip: border-box;
+  h2 {
+    @include section-header();
+  }
+
+  .price-point {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    span {
+      padding-left: 0.5em;
+      font-size: 1rem;
+      opacity: 0.8;
+      font-weight: 400;
     }
   }
-  .middle {
-    grid-area: left-box;
-    background-color: $cyan;
+
+  .access {
+    margin: 0 0 0.5rem 1rem;
+    opacity: 0.9;
+  }
+
+  input[type="button"] {
+    margin-top: 1em;
+    padding: 1em 35%;
+    background-color: $bright-yellow;
     color: white;
-    padding: 1rem;
-    h2 {
-      @include section-header();
-    }
+    font-weight: 700;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.08);
 
-    .price-point {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-left: 1rem;
-      margin-bottom: 0.5rem;
-      span {
-        padding-left: 0.5em;
-        transform: translateY(-5em);
-        font-size: 1rem;
-        opacity: 0.8;
-        font-weight: 400;
-      }
-    }
+    // for centering button in div
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 
-    .access {
-      margin: 0 0 0.5rem 1rem;
-      opacity: 0.9;
+    &:hover {
+      cursor: pointer;
     }
-
-    .button-container {
-      margin-top: 1.4em;
-      margin-left: 1em;
-      margin-right: 1.5em;
-      overflow: hidden;
-      display: block;
-      box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.08);
-    }
-    input[type="button"] {
-      width: 100%;
-      padding: 1em;
-      background-color: $bright-yellow;
-      color: white;
-      font-weight: 700;
-      border: none;
-      border-radius: 5%;
-
-      &:active {
-        transform: translateY(1px);
-      }
+    &:active {
+      transform: translateY(1px);
     }
   }
+}
 
-  .bottom {
-    padding: 1rem;
-    grid-area: right-box;
-    // width: 100%;
-    background-color: $cyan-lighter;
-    h2 {
-      @include section-header();
-    }
-    ul {
-      list-style: none;
-      color: $light-gray;
-      font-size: 0.8rem;
-      opacity: 0.9;
-      margin-left: 1em;
-      margin-bottom: 1em;
-      li {
-        padding: 0.12em;
-      }
+.bottom {
+  padding: 1rem;
+  grid-area: right-box;
+  background-color: $cyan-lighter;
+  h2 {
+    @include section-header();
+  }
+  ul {
+    list-style: none;
+    color: $light-gray;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    li {
+      padding: 0.12em;
     }
   }
 }
 
 .attribution {
+  margin-top: auto;
+  margin-bottom: 1.5em;
   text-align: center;
-  position: relative;
-  margin: auto 0;
-  // padding: 1.5em;
   ul {
     width: 100%;
     list-style: none;
