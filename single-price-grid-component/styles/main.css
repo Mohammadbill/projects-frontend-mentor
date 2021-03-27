@@ -123,8 +123,8 @@ body {
 }
 
 .middle input[type="button"]:active {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  -webkit-transform: translate(-50%, 1px);
+          transform: translate(-50%, 1px);
 }
 
 .bottom {
