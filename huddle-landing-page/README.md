@@ -41,8 +41,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://huddle-landing-page-mu-nine.vercel.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/landing-page-with-pure-css-popup-form-rketnWKVl)
+- [Live Site URL](https://huddle-landing-page-mu-nine.vercel.app/)
 
 ## My process
 
