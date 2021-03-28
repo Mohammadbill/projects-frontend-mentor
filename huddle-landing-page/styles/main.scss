@@ -99,6 +99,7 @@ input[type="button"] {
       line-height: 1.65em;
       border-radius: 50%;
       text-align: center;
+      transition: 500ms;
 
       vertical-align: top;
       &:hover {
@@ -162,6 +163,7 @@ input[type="button"] {
     text-decoration: none;
     font-size: 2rem;
     padding: 0.5em 1em;
+    transition: 500ms;
     &:hover {
       color: $soft-magenta;
       transition: 500ms;

@@ -6237,6 +6237,8 @@ input[type="button"]:active {
   line-height: 1.65em;
   border-radius: 50%;
   text-align: center;
+  -webkit-transition: 500ms;
+  transition: 500ms;
   vertical-align: top;
 }
 
@@ -6321,6 +6323,8 @@ input[type="button"]:active {
   text-decoration: none;
   font-size: 2rem;
   padding: 0.5em 1em;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .popup-container a:hover {
