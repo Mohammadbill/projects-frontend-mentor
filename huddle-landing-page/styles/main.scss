@@ -101,6 +101,12 @@ input[type="button"] {
       text-align: center;
 
       vertical-align: top;
+      &:hover {
+        transition: 500ms;
+        background: white;
+        color: $violet;
+        cursor: pointer;
+      }
     }
   }
 }

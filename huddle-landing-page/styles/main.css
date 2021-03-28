@@ -6240,6 +6240,14 @@ input[type="button"]:active {
   vertical-align: top;
 }
 
+.sm-icons ul li:hover {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  background: white;
+  color: #674baf;
+  cursor: pointer;
+}
+
 .attribution {
   text-align: center;
   display: -webkit-box;
