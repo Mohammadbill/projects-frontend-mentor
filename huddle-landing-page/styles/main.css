@@ -6186,7 +6186,8 @@ header img {
   margin-bottom: 1em;
 }
 
-input[type="button"] {
+input[type="button"],
+button {
   font-family: "Poppins";
   color: #674baf;
   padding: 0.75em;
@@ -6199,11 +6200,13 @@ input[type="button"] {
           box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
 
-input[type="button"]:hover {
+input[type="button"]:hover,
+button:hover {
   cursor: pointer;
 }
 
-input[type="button"]:active {
+input[type="button"]:active,
+button:active {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
 }
@@ -6307,6 +6310,9 @@ input[type="button"]:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -6320,6 +6326,8 @@ input[type="button"]:active {
 }
 
 .popup-container a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   text-decoration: none;
   font-size: 2rem;
   padding: 0.5em 1em;
@@ -6354,7 +6362,7 @@ input[type="button"]:active {
   border-radius: 5px;
 }
 
-.popup-container form input[type="button"] {
+.popup-container form button {
   font-size: 1.25rem;
   color: white;
   background-color: #674baf;
@@ -6368,6 +6376,9 @@ input[type="button"]:active {
     background: #674baf url("/images/bg-desktop.svg") no-repeat;
     background-size: cover;
     font-size: 1.5vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header img {
     width: 15vw;
@@ -6375,6 +6386,9 @@ input[type="button"]:active {
   .main {
     display: -ms-grid;
     display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-grid-columns: minmax(0, 6fr) minmax(0, 5fr);
         grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
         grid-template-areas: "image content" "socials socials";
@@ -6390,8 +6404,8 @@ input[type="button"]:active {
     margin-left: 0;
     max-width: 27.5em;
   }
-  .content input[type="button"] {
-    font-size: 1.5rem;
+  .content button {
+    font-size: 1.25rem;
     margin-left: 0;
     max-width: 12em;
     padding: 1em 0.75em;

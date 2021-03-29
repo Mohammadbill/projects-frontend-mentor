@@ -59,7 +59,8 @@ header {
   }
 }
 
-input[type="button"] {
+input[type="button"],
+button {
   font-family: "Poppins";
   color: $violet;
   padding: 0.75em;
@@ -152,6 +153,7 @@ input[type="button"] {
 
 .popup-container {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   max-width: 90%;
   background: white;
@@ -160,6 +162,7 @@ input[type="button"] {
   text-align: right;
 
   a {
+    align-self: flex-end;
     text-decoration: none;
     font-size: 2rem;
     padding: 0.5em 1em;
@@ -190,11 +193,10 @@ input[type="button"] {
       border: 2px solid hsl(257, 40%, 49%);
       border-radius: 5px;
     }
-    input[type="button"] {
+    button {
       font-size: 1.25rem;
       color: white;
       background-color: $violet;
-      //   margin-top: 2em;
       padding-left: 2em;
       padding-right: 2em;
       width: auto;
@@ -207,6 +209,7 @@ input[type="button"] {
     background: $violet url("/images/bg-desktop.svg") no-repeat;
     background-size: cover;
     font-size: 1.5vw;
+    justify-content: center;
   }
 
   header img {
@@ -215,6 +218,7 @@ input[type="button"] {
 
   .main {
     display: grid;
+    align-items: center;
     grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
     grid-template-areas:
       "image content"
@@ -233,8 +237,8 @@ input[type="button"] {
       max-width: 27.5em;
     }
 
-    input[type="button"] {
-      font-size: 1.5rem;
+    button {
+      font-size: 1.25rem;
       margin-left: 0;
       max-width: 12em;
       padding: 1em 0.75em;
