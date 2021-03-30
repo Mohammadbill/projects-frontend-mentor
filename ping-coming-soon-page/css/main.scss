@@ -1,0 +1,177 @@
+// Typography
+
+$blue-main: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+
+$gray: hsl(0, 0%, 59%);
+$v-dark-blue: hsl(209, 33%, 12%);
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+@import "scss/brands.scss";
+
+// Main Page SCSS
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1em;
+  margin-top: 1em;
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // vertical align
+  align-items: center; // horizontal align
+}
+
+header {
+  margin: 3em auto 2em auto;
+  img {
+    width: 3.5em;
+  }
+}
+
+.main-heading {
+  text-align: center;
+  h1 {
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: $gray;
+    span {
+      font-weight: 600;
+      color: $v-dark-blue;
+    }
+  }
+  p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+  }
+}
+
+.form-container form {
+  @mixin pill-form {
+    font-family: "Libre Franklin", sans-serif;
+    width: 90%;
+    max-width: 22em;
+    border-radius: 9999px;
+    display: inline-block;
+    margin-bottom: 0.75em;
+    padding: 1em;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+
+  input {
+    @include pill-form();
+    border: 1px solid $pale-blue;
+    &::placeholder {
+      color: $gray;
+      opacity: 0.6;
+    }
+  }
+  button {
+    @include pill-form;
+    border: none;
+    background-color: $blue-main;
+    color: white;
+    box-shadow: 0px 2px 12px 1px rgba(79, 125, 243, 0.5);
+  }
+}
+
+.dashboard-img-container {
+  margin: 2em 1.5em 3em 1.5em;
+  img {
+    width: 85vw;
+  }
+}
+
+footer {
+  ul {
+    text-align: center;
+    margin-bottom: 2em;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0.5em;
+    }
+  }
+  .sm-icons {
+    color: $blue-main;
+    margin-bottom: 1em;
+    li {
+      border: 1px solid rgba(150, 150, 150, 0.2);
+      border-radius: 100%;
+      $radius: 1.6em;
+      width: $radius;
+      height: $radius;
+      line-height: 1.6em;
+      vertical-align: top;
+      transition: 500ms;
+
+      &:hover {
+        cursor: pointer;
+        transition: 500ms;
+        border: 1px solid $blue-main;
+        background-color: $blue-main;
+        color: white;
+      }
+    }
+  }
+  @mixin footer-text {
+    font-size: 0.75rem;
+    color: $gray;
+  }
+  p {
+    @include footer-text();
+    text-align: center;
+  }
+  .attribution {
+    @include footer-text();
+    li {
+      margin-bottom: 0;
+    }
+    a {
+      color: $blue-main;
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .main-heading {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 2em;
+    }
+  }
+  .dashboard-img-container img {
+    max-width: 28em;
+  }
+  .form-container form {
+    flex-direction: row;
+    input {
+      max-width: 30em;
+      margin-right: 1em;
+      margin-left: 1em;
+    }
+    button {
+      max-width: 15em;
+      margin-right: 1em;
+    }
+  }
+}
