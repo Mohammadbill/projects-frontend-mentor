@@ -25,14 +25,18 @@
         <p>Subscribe and get notified</p>
       </div>
       <div class="form-container">
-        <form action="">
+        <form name="notify-me" novalidate onsubmit="return false">
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Your email address..."
+            class="validation-pending"
           />
-          <button type="submit">Notify Me</button>
+          <label for="email" class="validation-pending"
+            >Please provide a valid email address</label
+          >
+          <button type="submit" id="form-submit">Notify Me</button>
         </form>
       </div>
       <div class="dashboard-img-container">
@@ -59,5 +63,7 @@
         <li>Coded by <a href="#">Your Name Here</a>.</li>
       </ul>
     </footer>
+
+    <script type="text/javascript" src="/js/validation.js"></script>
   </body>
 </html>
