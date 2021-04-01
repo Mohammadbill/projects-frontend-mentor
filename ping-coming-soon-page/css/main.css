@@ -6246,6 +6246,10 @@ footer .attribution a {
           transform: translateY(1px);
 }
 
+.form-container form button:hover {
+  cursor: pointer;
+}
+
 .email-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6263,7 +6267,7 @@ footer .attribution a {
 }
 
 #error-message {
-  display: none;
+  opacity: 0;
   color: #ff5263;
   font-size: 0.5em;
   font-style: italic;
@@ -6271,7 +6275,7 @@ footer .attribution a {
 }
 
 #error-message.validation-failed {
-  display: inline;
+  opacity: 1;
 }
 
 #email.validation-failed {

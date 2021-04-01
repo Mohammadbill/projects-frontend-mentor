@@ -33,6 +33,9 @@
     &:active {
       transform: translateY(1px);
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -46,7 +49,8 @@
 }
 
 #error-message {
-  display: none;
+  // display: none;
+  opacity: 0;
   color: $light-red;
   font-size: 0.5em;
   font-style: italic;
@@ -54,7 +58,8 @@
 }
 
 #error-message.validation-failed {
-  display: inline;
+  // display: inline;
+  opacity: 1;
 }
 
 #email.validation-failed {
