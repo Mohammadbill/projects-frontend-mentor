@@ -24,11 +24,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/screencap.png)
+![](/images/screencap.png)
 
 ### Links
 
-- [Frontend Mentor Solution]()
+- [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/my-first-javascript-project-j6elhVLpz)
 - [Live Site](https://ping-coming-soon-validation.vercel.app/)
 
 ## My process
