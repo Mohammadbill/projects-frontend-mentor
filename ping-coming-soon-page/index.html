@@ -26,16 +26,18 @@
       </div>
       <div class="form-container">
         <form name="notify-me" novalidate onsubmit="return false">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your email address..."
-            class="validation-pending"
-          />
-          <label for="email" class="validation-pending"
-            >Please provide a valid email address</label
-          >
+          <div class="email-container">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email address..."
+              class="validation"
+            />
+            <p class="validation" id="error-message">
+              Please provide a valid email address
+            </p>
+          </div>
           <button type="submit" id="form-submit">Notify Me</button>
         </form>
       </div>

@@ -1,20 +1,11 @@
-// Typography
-
-$blue-main: hsl(223, 87%, 63%);
-$pale-blue: hsl(223, 100%, 88%);
-$light-red: hsl(354, 100%, 66%);
-
-$gray: hsl(0, 0%, 59%);
-$v-dark-blue: hsl(209, 33%, 12%);
-
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
 @import "scss/fontawesome.scss";
 @import "scss/solid.scss";
 @import "scss/brands.scss";
 
+@import "variables.scss";
+@import "footer.scss";
 @import "form.scss";
-
-// Main Page SCSS
 
 *,
 *::before,
@@ -37,13 +28,11 @@ body {
 
 header {
   margin: 3em auto 2em auto;
-  img {
-    width: 3.5em;
-  }
 }
 
 .main-heading {
   text-align: center;
+  margin-bottom: 2em;
   h1 {
     margin-bottom: 0.5em;
     font-weight: 300;
@@ -57,69 +46,18 @@ header {
   p {
     font-size: 0.9rem;
     font-weight: 300;
-    margin-bottom: 1.5em;
+    margin-bottom: 2.5em;
   }
 }
 
 .dashboard-img-container {
-  margin: 2em 1.5em 3em 1.5em;
   img {
     width: 85vw;
+    margin: 3.5em 0;
   }
 }
 
-footer {
-  ul {
-    text-align: center;
-    margin-bottom: 2em;
-    li {
-      display: inline-block;
-      list-style: none;
-      margin: 0.5em;
-    }
-  }
-  .sm-icons {
-    color: $blue-main;
-    margin-bottom: 1em;
-    li {
-      border: 1px solid rgba(150, 150, 150, 0.2);
-      border-radius: 100%;
-      $radius: 1.6em;
-      width: $radius;
-      height: $radius;
-      line-height: 1.6em;
-      vertical-align: top;
-      transition: 500ms;
-
-      &:hover {
-        cursor: pointer;
-        transition: 500ms;
-        border: 1px solid $blue-main;
-        background-color: $blue-main;
-        color: white;
-      }
-    }
-  }
-  @mixin footer-text {
-    font-size: 0.75rem;
-    color: $gray;
-  }
-  p {
-    @include footer-text();
-    text-align: center;
-  }
-  .attribution {
-    @include footer-text();
-    li {
-      margin-bottom: 0;
-    }
-    a {
-      color: $blue-main;
-    }
-  }
-}
-
-@media only screen and (min-width: 580px) {
+@media only screen and (min-width: 540px) {
   .main-heading {
     h1 {
       font-size: 2.5rem;
