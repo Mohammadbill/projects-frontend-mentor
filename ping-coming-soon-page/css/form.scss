@@ -1,0 +1,75 @@
+.form-container form {
+  @mixin pill-form {
+    font-family: "Libre Franklin", sans-serif;
+    width: 90%;
+    max-width: 22em;
+    border-radius: 9999px;
+    display: inline-block;
+    margin-bottom: 0.75em;
+    padding: 1em;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   margin-bottom: 3em;
+  margin: 0 1em 3em 1em;
+
+  input[type="email"] {
+    @include pill-form();
+    border: 1px solid $pale-blue;
+    margin-bottom: 2.35em;
+    &::placeholder {
+      color: $gray;
+      opacity: 0.6;
+    }
+    .validation-failed {
+      border: 1px solid $light-red;
+    }
+  }
+
+  button {
+    @include pill-form;
+    border: none;
+    background-color: $blue-main;
+    color: white;
+    box-shadow: 0px 2px 12px 1px rgba(79, 125, 243, 0.5);
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+p .validation-pending {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: $light-red;
+  margin: -0.5em auto 1em auto;
+  display: none;
+  .validation-failed {
+    display: visible;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 580px) {
+  .form-container form {
+    align-items: flex-start;
+    flex-direction: row;
+    input {
+      display: inline-block;
+      position: relative;
+      max-width: 30em;
+      margin-right: 1em;
+      margin-left: 1em;
+    }
+    label {
+      // display: inline-block;
+      // position: relative;
+    }
+    button {
+      max-width: 15em;
+      margin-right: 1em;
+    }
+  }
+}

@@ -6127,6 +6127,112 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+.form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1em 3em 1em;
+}
+
+.form-container form input[type="email"] {
+  font-family: "Libre Franklin", sans-serif;
+  width: 90%;
+  max-width: 22em;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-bottom: 0.75em;
+  padding: 1em;
+  border: 1px solid #c2d3ff;
+  margin-bottom: 2.35em;
+}
+
+.form-container form input[type="email"]::-webkit-input-placeholder {
+  color: #969696;
+  opacity: 0.6;
+}
+
+.form-container form input[type="email"]:-ms-input-placeholder {
+  color: #969696;
+  opacity: 0.6;
+}
+
+.form-container form input[type="email"]::-ms-input-placeholder {
+  color: #969696;
+  opacity: 0.6;
+}
+
+.form-container form input[type="email"]::placeholder {
+  color: #969696;
+  opacity: 0.6;
+}
+
+.form-container form input[type="email"] .validation-failed {
+  border: 1px solid #ff5263;
+}
+
+.form-container form button {
+  font-family: "Libre Franklin", sans-serif;
+  width: 90%;
+  max-width: 22em;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-bottom: 0.75em;
+  padding: 1em;
+  border: none;
+  background-color: #4f7df3;
+  color: white;
+  -webkit-box-shadow: 0px 2px 12px 1px rgba(79, 125, 243, 0.5);
+          box-shadow: 0px 2px 12px 1px rgba(79, 125, 243, 0.5);
+}
+
+.form-container form button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+p .validation-pending {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #ff5263;
+  margin: -0.5em auto 1em auto;
+  display: none;
+}
+
+p .validation-pending .validation-failed {
+  display: visible;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 580px) {
+  .form-container form {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .form-container form input {
+    display: inline-block;
+    position: relative;
+    max-width: 30em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  .form-container form button {
+    max-width: 15em;
+    margin-right: 1em;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -6184,101 +6290,6 @@ header img {
   font-size: 0.9rem;
   font-weight: 300;
   margin-bottom: 1.5em;
-}
-
-.form-container form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 1em 3em 1em;
-}
-
-.form-container form input[type="email"] {
-  font-family: "Libre Franklin", sans-serif;
-  width: 90%;
-  max-width: 22em;
-  border-radius: 9999px;
-  display: inline-block;
-  margin-bottom: 0.75em;
-  padding: 1em;
-  border: 1px solid #c2d3ff;
-  margin-bottom: 2.35em;
-}
-
-.form-container form input[type="email"]::-webkit-input-placeholder {
-  color: #969696;
-  opacity: 0.6;
-}
-
-.form-container form input[type="email"]:-ms-input-placeholder {
-  color: #969696;
-  opacity: 0.6;
-}
-
-.form-container form input[type="email"]::-ms-input-placeholder {
-  color: #969696;
-  opacity: 0.6;
-}
-
-.form-container form input[type="email"]::placeholder {
-  color: #969696;
-  opacity: 0.6;
-}
-
-.form-container form input[type="email"]::-webkit-input-placeholder .validation-failed {
-  border: 1px solid #ff5263;
-}
-
-.form-container form input[type="email"]:-ms-input-placeholder .validation-failed {
-  border: 1px solid #ff5263;
-}
-
-.form-container form input[type="email"]::-ms-input-placeholder .validation-failed {
-  border: 1px solid #ff5263;
-}
-
-.form-container form input[type="email"]::placeholder .validation-failed {
-  border: 1px solid #ff5263;
-}
-
-.form-container form label {
-  font-size: 0.75rem;
-  font-style: italic;
-  color: #ff5263;
-  margin: -0.5em auto 1em auto;
-  display: none;
-}
-
-.form-container form label .validation-failed {
-  display: visible;
-  margin-bottom: 1em;
-}
-
-.form-container form button {
-  font-family: "Libre Franklin", sans-serif;
-  width: 90%;
-  max-width: 22em;
-  border-radius: 9999px;
-  display: inline-block;
-  margin-bottom: 0.75em;
-  padding: 1em;
-  border: none;
-  background-color: #4f7df3;
-  color: white;
-  -webkit-box-shadow: 0px 2px 12px 1px rgba(79, 125, 243, 0.5);
-          box-shadow: 0px 2px 12px 1px rgba(79, 125, 243, 0.5);
-}
-
-.form-container form button:active {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
 }
 
 .dashboard-img-container {
@@ -6354,29 +6365,6 @@ footer .attribution a {
   }
   .dashboard-img-container img {
     max-width: 28em;
-  }
-  .form-container form {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .form-container form input {
-    display: inline-block;
-    position: relative;
-    max-width: 30em;
-    margin-right: 1em;
-    margin-left: 1em;
-  }
-  .form-container form label {
-    display: inline-block;
-  }
-  .form-container form button {
-    max-width: 15em;
-    margin-right: 1em;
   }
 }
 /*# sourceMappingURL=main.css.map */
