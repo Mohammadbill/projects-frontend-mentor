@@ -6324,7 +6324,7 @@ body {
 }
 
 header {
-  margin: 3em auto 2em auto;
+  margin-bottom: 2em;
 }
 
 .main-heading {
