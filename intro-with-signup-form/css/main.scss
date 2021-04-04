@@ -1,0 +1,165 @@
+@import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+// variables
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+@mixin box-shadow {
+  box-shadow: 1px 6px 0 0 rgba($color: #000000, $alpha: 0.15);
+}
+
+body {
+  background-color: $red;
+  background-image: url("/images/bg-intro-mobile.png");
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // vertical center
+  justify-content: center; // horizontal center
+  padding: 1.5em;
+  font-size: 16px;
+  margin: auto;
+}
+
+.content-container {
+  display: grid;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  h1 {
+    margin: 3em 0 1em 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 3em;
+  }
+}
+
+.try-free {
+  @include box-shadow;
+  margin: 0 auto;
+  max-width: 360px;
+  background-color: $blue;
+  font-size: 0.75rem;
+  line-height: 1.75em;
+  font-weight: 400;
+  padding: 1.1em 1em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  p {
+    margin: 0 auto;
+    width: 72%;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+
+.form-container {
+  @include box-shadow();
+  max-width: 360px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1em;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  margin-bottom: 1em;
+
+  input {
+    width: 100%;
+    padding: 0.75em 0.5em;
+    margin: 0.5em auto;
+    border-radius: 12px;
+    border: hsl(246, 25%, 90%) 1px solid;
+  }
+}
+
+button.pushable {
+  margin-top: 1em;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: hsl(150, 59%, 35%);
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+
+  span.button-front {
+    display: block;
+    padding: 1em 2em;
+    border-radius: 12px;
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+
+    will-change: transform; // hint to browser we're going to animate the element - so it optimizes for this case.
+    transition: transform 600ms; // this is much longer than hover or active, it will rise slower than it does anything else
+    transform: translateY(-5px);
+
+    &:hover {
+      transform: translateY(-6px);
+      transition: transform 250ms;
+    }
+    &:active {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+  }
+}
+
+p.terms {
+  margin: 1em auto;
+  color: $grayish-blue;
+  font-size: 0.75rem;
+  span {
+    font-weight: 600;
+    color: $red;
+  }
+}
+
+// The below removes outline UNLESS someone has settings that benefit from visual focus indecator (e.g. keyboard navigation)
+button.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.attribution {
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0 auto;
+  justify-self: center;
+  ul {
+    margin: 0;
+  }
+  li {
+    // margin: 0 1em;
+    display: inline-block;
+    a {
+      font-weight: 600;
+      color: $blue;
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .form-container {
+    grid-template-areas: "hero form";
+  }
+  .hero-content {
+    grid-area: hero;
+  }
+  .right-hand-content {
+    grid-area: form;
+  }
+}

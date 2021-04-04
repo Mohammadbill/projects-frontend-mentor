@@ -1,0 +1,264 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #ff7a7a;
+  background-image: url("/images/bg-intro-mobile.png");
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5em;
+  font-size: 16px;
+  margin: auto;
+}
+
+.content-container {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  margin: 3em 0 1em 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 3em;
+}
+
+.try-free {
+  -webkit-box-shadow: 1px 6px 0 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 6px 0 0 rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  max-width: 360px;
+  background-color: #6055a5;
+  font-size: 0.75rem;
+  line-height: 1.75em;
+  font-weight: 400;
+  padding: 1.1em 1em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+}
+
+.try-free p {
+  margin: 0 auto;
+  width: 72%;
+}
+
+.try-free span {
+  font-weight: 600;
+}
+
+.form-container {
+  -webkit-box-shadow: 1px 6px 0 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 6px 0 0 rgba(0, 0, 0, 0.15);
+  max-width: 360px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1em;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  margin-bottom: 1em;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 0.75em 0.5em;
+  margin: 0.5em auto;
+  border-radius: 12px;
+  border: #e0dfec 1px solid;
+}
+
+button.pushable {
+  margin-top: 1em;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #258e59;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+button.pushable span.button-front {
+  display: block;
+  padding: 1em 2em;
+  border-radius: 12px;
+  color: white;
+  background-color: #38cc8c;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 600ms;
+  transition: -webkit-transform 600ms;
+  transition: transform 600ms;
+  transition: transform 600ms, -webkit-transform 600ms;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+button.pushable span.button-front:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+button.pushable span.button-front:active {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: -webkit-transform 34ms;
+  transition: -webkit-transform 34ms;
+  transition: transform 34ms;
+  transition: transform 34ms, -webkit-transform 34ms;
+}
+
+p.terms {
+  margin: 1em auto;
+  color: #b9b6d3;
+  font-size: 0.75rem;
+}
+
+p.terms span {
+  font-weight: 600;
+  color: #ff7a7a;
+}
+
+button.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.attribution {
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0 auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.attribution ul {
+  margin: 0;
+}
+
+.attribution li {
+  display: inline-block;
+}
+
+.attribution li a {
+  font-weight: 600;
+  color: #6055a5;
+}
+
+@media only screen and (min-width: 500px) {
+  .form-container {
+        grid-template-areas: "hero form";
+  }
+  .hero-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: hero;
+  }
+  .right-hand-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: form;
+  }
+}
+/*# sourceMappingURL=main.css.map */
