@@ -319,7 +319,7 @@ footer li a {
   opacity: 0;
 }
 
-.error .error.activated {
+.error.activated {
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

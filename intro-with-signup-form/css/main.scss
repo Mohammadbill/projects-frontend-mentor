@@ -204,7 +204,8 @@ footer {
   margin-top: -0.5em;
   padding-top: 0;
   opacity: 0;
-  .error.activated {
-    opacity: 1;
-  }
+}
+
+.error.activated {
+  opacity: 1;
 }
