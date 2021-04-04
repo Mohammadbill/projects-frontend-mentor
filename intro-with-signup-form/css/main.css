@@ -96,6 +96,7 @@ body {
 }
 
 .content-container {
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: center;
