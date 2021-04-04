@@ -19,11 +19,8 @@ body {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center; // vertical center
-  justify-content: center; // horizontal center
   padding: 1.5em;
   font-size: 16px;
-  margin: auto;
   min-height: 100vh;
 }
 
@@ -38,7 +35,7 @@ body {
 
 .hero-content {
   h1 {
-    margin: 3em 0 1em 0;
+    margin: 3em 1em 1em 1em;
     font-size: 1.5rem;
     font-weight: 600;
   }
@@ -62,7 +59,6 @@ body {
   border-radius: 10px;
   p {
     margin: 0 auto;
-    width: 72%;
   }
   span {
     font-weight: 600;

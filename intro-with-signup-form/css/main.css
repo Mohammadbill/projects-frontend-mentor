@@ -90,15 +90,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 1.5em;
   font-size: 16px;
-  margin: auto;
   min-height: 100vh;
 }
 
@@ -116,7 +109,7 @@ body {
 }
 
 .hero-content h1 {
-  margin: 3em 0 1em 0;
+  margin: 3em 1em 1em 1em;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -143,7 +136,6 @@ body {
 
 .try-free p {
   margin: 0 auto;
-  width: 72%;
 }
 
 .try-free span {
