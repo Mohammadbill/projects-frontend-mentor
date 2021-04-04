@@ -99,13 +99,20 @@ body {
   padding: 1.5em;
   font-size: 16px;
   margin: auto;
+  min-height: 100vh;
 }
 
 .content-container {
   display: -ms-grid;
   display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: center;
   color: white;
+  max-width: 1450px;
 }
 
 .hero-content h1 {
@@ -224,41 +231,95 @@ button.pushable:focus:not(:focus-visible) {
   outline: none;
 }
 
-.attribution {
+footer {
+  height: 100%;
+  width: 100%;
   color: white;
-  font-size: 0.75rem;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+footer ul {
   text-align: center;
   margin: 0 auto;
-  -ms-grid-column-align: center;
-      justify-self: center;
 }
 
-.attribution ul {
-  margin: 0;
-}
-
-.attribution li {
+footer li {
   display: inline-block;
+  margin: 0 1em;
 }
 
-.attribution li a {
+footer li a {
   font-weight: 600;
   color: #6055a5;
 }
 
-@media only screen and (min-width: 500px) {
-  .form-container {
+@media only screen and (min-width: 675px) {
+  .content-container {
         grid-template-areas: "hero form";
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   .hero-content {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: hero;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    padding: 1em;
+    max-width: 550px;
+    text-align: left;
+  }
+  .hero-content h1 {
+    margin: auto;
+    font-size: 2.6em;
+    margin-bottom: 0.5em;
+  }
+  .hero-content p {
+    font-size: 1em;
   }
   .right-hand-content {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: form;
   }
+  .right-hand-content .try-free {
+    max-width: 550px;
+  }
+  .right-hand-content .form-container {
+    max-width: 550px;
+  }
+}
+
+.error {
+  font-size: 0.7rem;
+  text-align: center;
+  color: red;
+  margin-top: -0.5em;
+  padding-top: 0;
+  opacity: 0;
+}
+
+.error .error.activated {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

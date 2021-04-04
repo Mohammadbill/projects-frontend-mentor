@@ -24,7 +24,7 @@
           is invaluable.
         </p>
       </div>
-      <right-hand-content>
+      <div class="right-hand-content">
         <div class="try-free">
           <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
         </div>
@@ -32,9 +32,13 @@
         
            <form action="">
              <input type="text" placeholder="First Name"></input>
+             <p class="error">First Name cannot be empty.</p>
              <input type="text" placeholder="Last Name"></input>
+             <p class="error">Last Name cannot be empty.</p>
              <input type="email" placeholder="Email Address"></input>
+             <p class="error">Email cannot be empty.</p>
              <input type="password" placeholder="Password"></input>
+             <p class="error">Password must be at least 8 characters.</p>
              <button class="pushable"><span class="button-front">Claim your free trial</span></button>
           </form>
           <p class="terms">
@@ -42,7 +46,7 @@
             you are agreeing to our <span>Terms and Services</span>
           </p>
         </div>
-      </right-hand-content>
+      </div>
     </div>
 
     <footer>
@@ -55,5 +59,6 @@
         </p>
       </ul>
     </footer>
+    <script src="js/validation.js"></script>
   </body>
 </html>
