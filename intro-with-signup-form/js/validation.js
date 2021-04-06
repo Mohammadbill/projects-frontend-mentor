@@ -1,24 +1,30 @@
 function addErrorClass (inputClass) {
-    document.querySelector(`p.error.${inputClass}`).classList.add('activated');
+    inputClass.classList.add('activated');
 }
 function removeErrorClass (inputClass) {
-    document.querySelector(`p.error.${inputClass}`).classList.remove('activated');
+    inputClass.classList.remove('activated');
 }
 
-const inputs = document.querySelectorAll('input');
-const emailRegex = new RegExp("[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", 'g');
-
-[...document.querySelectorAll('button')][0].addEventListener('click', event => {
+function validateInputs() {
+    const emailCheck = emailRegex.test(
+        document.getElementById('email-input').value.toUpperCase()
+    );
     inputs.forEach(input => {
-        switch (input.type) {
+        switch (input.firstElementChild.type) {
             case 'password':
-                (input.value.length < 8) ? addErrorClass(input.classList[0]) : removeErrorClass(input.classList[0]);
+                (input.firstElementChild.value.length < 8) ? addErrorClass(input) : removeErrorClass(input);
                 break;
             case 'email':
-                (!(emailRegex.test(input.value))) ? addErrorClass(input.classList[0]) : removeErrorClass(input.classList[0]);
+                (!(emailCheck)) ? addErrorClass(input) : removeErrorClass(input);
                 break;
             default:
-                (input.value.length < 1) ? addErrorClass(input.classList[0]) : removeErrorClass(input.classList[0]);
+                (input.firstElementChild.value.length < 1) ? addErrorClass(input) : removeErrorClass(input);
         }
     })
-})
+    return (document.querySelectorAll('.activated').length > 0) ? false : true;
+}
+
+const inputs = document.querySelectorAll('.error-check');
+const emailRegex = new RegExp("[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$");
+
+let validateForm = () => validateInputs() ? false : true;

@@ -316,7 +316,11 @@ footer li a {
   opacity: 0;
 }
 
-.error.activated {
+.activated input {
+  border: 1px solid red;
+}
+
+.activated p {
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

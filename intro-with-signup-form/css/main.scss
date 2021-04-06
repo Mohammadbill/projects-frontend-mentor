@@ -209,6 +209,11 @@ footer {
   opacity: 0;
 }
 
-.error.activated {
-  opacity: 1;
+.activated {
+  input {
+    border: 1px solid red;
+  }
+  p {
+    opacity: 1;
+  }
 }
