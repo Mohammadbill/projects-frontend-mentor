@@ -10,7 +10,7 @@ $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
 
 @mixin box-shadow {
-  box-shadow: 1px 6px 0 0 rgba($color: #000000, $alpha: 0.15);
+  box-shadow: 1px 8px 0 0 rgba($color: #000000, $alpha: 0.15);
 }
 
 body {
@@ -25,25 +25,26 @@ body {
 }
 
 .content-container {
-  margin: 0 auto;
-  display: grid;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   align-content: center;
-  flex-grow: 1;
+  // flex-grow: 1;
   text-align: center;
   color: white;
-  max-width: 1450px;
+  max-width: 400px;
 }
 
 .hero-content {
   h1 {
-    margin: 3em 1em 1em 1em;
+    margin: 2.5em 1em 1em 1em;
     font-size: 1.5rem;
     font-weight: 600;
   }
   p {
     font-size: 0.9rem;
     opacity: 0.9;
-    margin-bottom: 3em;
+    margin-bottom: 4em;
   }
 }
 
@@ -52,10 +53,10 @@ body {
   margin: 0 auto;
   max-width: 360px;
   background-color: $blue;
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.75em;
   font-weight: 400;
-  padding: 1.1em 1em;
+  padding: 1.1em 2em;
   margin-bottom: 2em;
   border-radius: 10px;
   p {
@@ -77,8 +78,10 @@ body {
   margin-bottom: 1em;
 
   input {
+    font-weight: 500;
     width: 100%;
     padding: 0.75em 0.5em;
+    padding-left: 1.5em;
     margin: 0.5em auto;
     border-radius: 12px;
     border: hsl(246, 25%, 90%) 1px solid;
@@ -86,7 +89,7 @@ body {
 }
 
 button.pushable {
-  margin-top: 2em;
+  margin-top: 0.75em;
   width: 100%;
   border: none;
   border-radius: 12px;
@@ -120,7 +123,7 @@ button.pushable {
 }
 
 p.terms {
-  margin: 1em auto;
+  margin: 1.5em auto 2.5em auto;
   color: $grayish-blue;
   font-size: 0.75rem;
   span {
@@ -138,7 +141,7 @@ footer {
   height: 100%;
   width: 100%;
   color: white;
-  font-size: 1rem;
+  font-size: 0.75rem;
   display: flex;
   margin: auto;
   flex: 0;
@@ -156,34 +159,34 @@ footer {
   }
 }
 
-@media only screen and (min-width: 675px) {
+@media only screen and (min-width: 775px) {
   .content-container {
-    grid-template-areas: "hero form";
+    flex-direction: row;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
+    max-width: 1450px;
   }
   .hero-content {
-    grid-area: hero;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: auto;
     padding: 1em;
-    max-width: 550px;
     text-align: left;
     h1 {
       margin: auto;
-      font-size: 2.6em;
+      font-size: 3.25rem;
       margin-bottom: 0.5em;
     }
     p {
-      font-size: 1em;
+      font-size: 1.25rem;
+      margin-bottom: 0;
     }
   }
   .right-hand-content {
-    grid-area: form;
-    $rh-width: 550px;
+    width: 50%;
+    $rh-width: 600px;
 
     .try-free {
       max-width: $rh-width;
@@ -191,6 +194,9 @@ footer {
     .form-container {
       max-width: $rh-width;
     }
+  }
+  footer {
+    font-size: 1rem;
   }
 }
 
