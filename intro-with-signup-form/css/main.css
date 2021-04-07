@@ -167,6 +167,12 @@ body {
   border: #e0dfec 1px solid;
 }
 
+input:focus {
+  outline: none;
+  border: #6055a5 solid 1px;
+  border-radius: 12px;
+}
+
 button.pushable {
   margin-top: 0.75em;
   width: 100%;
