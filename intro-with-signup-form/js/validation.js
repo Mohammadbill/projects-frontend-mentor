@@ -27,4 +27,4 @@ function validateInputs() {
 const inputs = document.querySelectorAll('.error-check');
 const emailRegex = new RegExp("[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$");
 
-let validateForm = () => validateInputs() ? false : true;
+let validateForm = (event) => validateInputs() ? true : event.preventDefault();
