@@ -1,0 +1,88 @@
+// Variables and Imports
+
+@import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+$desaturated-dark-blue: hsl(214, 17%, 51%);
+$dark-grey-blue: hsl(217, 19%, 35%);
+$gray-blue: hsl(212, 23%, 69%);
+$light-gray-blue: hsl(210, 46%, 95%);
+
+:root {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+}
+
+@mixin center-flex {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+body {
+  @include center-flex();
+  background-color: $light-gray-blue;
+}
+
+.container {
+  @include center-flex();
+  background-color: white;
+  color: $desaturated-dark-blue;
+  font-weight: 500;
+  max-width: 30em;
+  border-radius: 1em;
+  overflow: hidden;
+  // TODO: box-shadow: ;
+}
+
+.article-container {
+  padding: 3em;
+}
+
+.img-container {
+  background-image: url("/images/drawers.jpg");
+  background-size: 100% auto;
+  min-height: 20em;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.article-preview {
+  padding-bottom: 2em;
+
+  h2 {
+    color: $dark-grey-blue;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.22rem;
+  }
+}
+
+.article-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.22rem;
+  img {
+    border-radius: 50%;
+    width: 4em;
+    margin-right: 1em;
+  }
+  span {
+    font-weight: 700;
+    display: block;
+  }
+}
+
+.share-icon {
+  min-width: 10em;
+  min-height: 10em;
+}
+
+.attribution {
+}
