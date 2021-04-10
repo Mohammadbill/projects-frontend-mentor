@@ -108,19 +108,21 @@ button {
   .car-category.inactive {
     flex: 1;
     padding: 1em;
-    button,
+    transition: 750ms ease-in-out;
     img,
     p,
     h1 {
-      transition: 500ms ease-out;
       opacity: 0;
       overflow: hidden;
       white-space: keep-all;
     }
+    button {
+      display: none;
+    }
   }
 }
 .car-category.active {
-  transition: 500ms ease-in-out;
+  transition: 750ms ease-in-out;
   flex: 10;
 }
 .learn-more {

@@ -226,22 +226,24 @@ button:focus:not(:focus-visible) {
         -ms-flex: 1;
             flex: 1;
     padding: 1em;
+    -webkit-transition: 750ms ease-in-out;
+    transition: 750ms ease-in-out;
   }
-  .car-category.inactive button,
   .car-category.inactive img,
   .car-category.inactive p,
   .car-category.inactive h1 {
-    -webkit-transition: 500ms ease-out;
-    transition: 500ms ease-out;
     opacity: 0;
     overflow: hidden;
     white-space: keep-all;
   }
+  .car-category.inactive button {
+    display: none;
+  }
 }
 
 .car-category.active {
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
+  -webkit-transition: 750ms ease-in-out;
+  transition: 750ms ease-in-out;
   -webkit-box-flex: 10;
       -ms-flex: 10;
           flex: 10;
