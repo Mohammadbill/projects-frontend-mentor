@@ -11,8 +11,9 @@ castActive = (carType) => {
 }
 
 changeButtonText = (button) => {
-    const currentButton = button.getElementsByTagName('button')[0];
-    currentButton.innerText = (currentButton.outerText === "Learn More") ? "Go Back" : "Learn More"
+    
+    const currentButton = button.querySelector('button')
+    currentButton.innerText = (currentButton.innerText === "Learn More") ? "Go Back" : "Learn More"
 }
 
 buttonActionMakeActive = (activeCard, inactiveCards) => {
@@ -32,7 +33,7 @@ buttonActionAlreadyActive = (activeCard) => {
 }
 
 activateButton = (event) => {
-    const activeCard = event.path[1];
+    const activeCard = event.target.parentElement;
     const inactiveCards = carCards.filter(function (car) {
         return car !== activeCard
     })
