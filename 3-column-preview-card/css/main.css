@@ -106,6 +106,7 @@ body {
 }
 
 .car-category {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +119,6 @@ body {
           justify-content: flex-start;
   padding: 2.5em;
   padding-bottom: 2em;
-  width: 100%;
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
@@ -129,7 +129,7 @@ body {
   }
 }
 
-@media screen and (min-width: 826px) {
+@media only screen and (min-width: 826px) {
   .car-category {
     max-width: auto;
     height: 26em;

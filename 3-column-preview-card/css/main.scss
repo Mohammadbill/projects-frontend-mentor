@@ -18,10 +18,8 @@ body {
 
 .container {
   display: flex;
-
   border-radius: 6px;
   overflow: hidden;
-
   flex-direction: column;
   margin: auto auto 3em auto;
   max-width: auto;
@@ -34,20 +32,18 @@ body {
 }
 
 .car-category {
+  width: 100%;
   display: flex;
-
   flex-direction: column;
   justify-content: flex-start;
   padding: 2.5em;
   padding-bottom: 2em;
-  width: 100%;
-
   transition: 500ms ease-in-out;
 
   @media only screen and (max-width: $desktop-breakpoint) {
     max-width: 350px;
   }
-  @media screen and (min-width: $desktop-breakpoint) {
+  @media only screen and (min-width: $desktop-breakpoint) {
     max-width: auto;
     height: 26em;
   }
