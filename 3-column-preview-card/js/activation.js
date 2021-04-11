@@ -11,8 +11,7 @@ castActive = (carType) => {
 }
 
 changeButtonText = (button) => {
-    
-    const currentButton = button.querySelector('button')
+    const currentButton = button.querySelector('button');
     currentButton.innerText = (currentButton.innerText === "Learn More") ? "Go Back" : "Learn More"
 }
 
