@@ -233,6 +233,8 @@ button:focus:not(:focus-visible) {
   .car-category.inactive img,
   .car-category.inactive p,
   .car-category.inactive h1 {
+    -webkit-transition: 350ms ease-in-out;
+    transition: 350ms ease-in-out;
     opacity: 0;
     overflow: hidden;
     white-space: keep-all;

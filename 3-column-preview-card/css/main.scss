@@ -109,6 +109,7 @@ button {
     img,
     p,
     h1 {
+      transition: 350ms ease-in-out;
       opacity: 0;
       overflow: hidden;
       white-space: keep-all;
