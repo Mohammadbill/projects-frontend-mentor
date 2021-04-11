@@ -33,9 +33,8 @@ buttonActionAlreadyActive = (activeCard) => {
 
 activateButton = (event) => {
     const activeCard = event.target.parentElement;
-    const inactiveCards = carCards.filter(function (car) {
-        return car !== activeCard
-    })
+    const inactiveCards = carCards.filter(car => car !== activeCard );
+    
     if ([...activeCard.classList].includes('active')) {
         buttonActionAlreadyActive(activeCard)
     } else {
