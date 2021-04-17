@@ -75,12 +75,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 2em;
   text-align: center;
   font-size: 15px;
@@ -126,6 +120,10 @@ span {
   max-width: 15em;
 }
 
+.container h1 span {
+  color: #aa5cdb;
+}
+
 .container .grid-container {
   padding: 2em;
 }
@@ -145,10 +143,6 @@ span {
   display: block;
 }
 
-h1 span {
-  color: #aa5cdb;
-}
-
 @media screen and (min-width: 956px) {
   .container {
     max-width: 65rem;
@@ -166,7 +160,6 @@ h1 span {
     -ms-grid-column: 2;
     grid-area: hero;
     height: 100%;
-    margin-bottom: 0;
     background: url("../images/image-header-desktop.jpg") no-repeat right center;
     background-size: auto 110%;
   }
@@ -184,12 +177,9 @@ h1 span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
     margin-bottom: 4em;
   }
   .container .text-container h1 {
-    margin: 0;
     margin-bottom: 0.75em;
   }
   .container .stats-container {
@@ -213,7 +203,7 @@ h1 span {
 
 .attribution {
   justify-self: flex-end;
-  margin: 2em auto;
+  margin-top: 2em;
 }
 
 .attribution a {
