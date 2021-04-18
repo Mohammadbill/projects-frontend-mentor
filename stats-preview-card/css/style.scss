@@ -38,12 +38,12 @@ span {
   background-color: $desaturated-blue;
 
   .image-container {
-    height: 15em;
+    height: 17em;
     width: 100%;
     background-image: url("../images/image-header-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% auto;
+    background-size: cover;
     margin-bottom: 1em;
 
     .overlay {
@@ -96,7 +96,7 @@ span {
       height: 100%;
       background: url("../images/image-header-desktop.jpg") no-repeat right
         center;
-      background-size: auto 110%;
+      background-size: cover;
     }
     .grid-container {
       padding: 5em;
