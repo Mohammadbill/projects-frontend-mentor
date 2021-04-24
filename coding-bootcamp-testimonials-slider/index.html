@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <div class="image-container">
+          <img
+            src="/images/image-tanya.jpg"
+            alt="Profile pic of Tanya Sinclair"
+            class="active"
+          />
+          <img src="/images/image-john.jpg" alt="Profile pic of John Tarkpor" />
+          <img src="/images/image-testing.png" alt="Third profile pic" />
+        </div>
+        <div class="button-container">
+          <div class="slider-button">
+            <img src="/images/icon-prev.svg" alt="Previous button" id="prev" />
+            <img src="/images/icon-next.svg" alt="Next button" id="next" />
+          </div>
+        </div>
+      </section>
+      <section class="testimonial">
+        <div class="slider-container active">
+          <p class="quote">
+            “ I’ve been interested in coding for a while but never taken the
+            jump, until now. I couldn’t recommend this course enough. I’m now in
+            the job of my dreams and so excited about the future. ”
+          </p>
+          <p class="quote-name-title">
+            <span>Tanya Sinclair</span> UX Engineer
+          </p>
+        </div>
+        <div class="slider-container">
+          <p class="quote">
+            “ If you want to lay the best foundation possible I’d recommend
+            taking this course. The depth the instructors go into is incredible.
+            I now feel so confident about starting up as a professional
+            developer. ”
+          </p>
+          <p class="quote-name-title">
+            <span>John Tarkpor</span> Junior Front-end Developer
+          </p>
+        </div>
+        <div class="slider-container">
+          <p class="quote">
+            “ Just testing my JavaScript works for a third image (and can be
+            presumed to work for however many are put into the HTML). Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. ”
+          </p>
+          <p class="quote-name-title">
+            <span>Test Guy</span> Senior Full Stack Developer
+          </p>
+        </div>
+      </section>
+    </div>
+    <div class="attribution">
+      <ul>
+        <li>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >
+        </li>
+        <li>Coded by <a href="#">Fraser Watt</a></li>
+      </ul>
+    </div>
+    <script src="/js/slider.js"></script>
+  </body>
+</html>
