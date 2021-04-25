@@ -200,6 +200,10 @@ form button {
 
 @media screen and (min-width: 800px) {
   .container {
+    background: url("/images/bg-pattern-desktop.svg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: auto;
     padding-left: 1em;
     width: 100%;

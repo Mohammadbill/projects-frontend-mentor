@@ -122,6 +122,11 @@ form {
 // Desktop
 @media screen and (min-width: $desktop-breakpoint) {
   .container {
+    background: url("/images/bg-pattern-desktop.svg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     margin: auto;
     padding-left: 1em;
     width: 100%;
