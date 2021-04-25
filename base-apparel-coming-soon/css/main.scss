@@ -55,7 +55,7 @@ body {
 }
 .form-container {
   margin: auto;
-  // padding: 0 2em;
+  padding: 0 2em;
 
   h1 {
     span {
@@ -165,10 +165,10 @@ form {
     margin: auto;
     grid-area: form;
     h1 {
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       word-spacing: 100vw;
       margin: 0;
-      margin-bottom: 1em;
+      // margin-bottom: 1em;
       max-width: 10rem;
     }
     p.message {
@@ -178,7 +178,7 @@ form {
     }
     form {
       margin: 0;
-      max-width: 25em;
+      max-width: 30em;
       margin-bottom: 1em;
       button {
         width: 6em;

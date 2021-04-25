@@ -113,6 +113,7 @@ body {
 
 .form-container {
   margin: auto;
+  padding: 0 2em;
 }
 
 .form-container h1 {
@@ -249,10 +250,9 @@ form button {
     grid-area: form;
   }
   .form-container h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     word-spacing: 100vw;
     margin: 0;
-    margin-bottom: 1em;
     max-width: 10rem;
   }
   .form-container p.message {
@@ -262,7 +262,7 @@ form button {
   }
   .form-container form {
     margin: 0;
-    max-width: 25em;
+    max-width: 30em;
     margin-bottom: 1em;
   }
   .form-container form button {
