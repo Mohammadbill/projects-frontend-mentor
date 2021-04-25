@@ -159,10 +159,6 @@ form input {
   background: none;
 }
 
-form input:focus:not(:focus-visible) {
-  outline: none;
-}
-
 form input::-webkit-input-placeholder {
   color: rgba(206, 151, 151, 0.5);
 }
@@ -302,5 +298,9 @@ form button {
 
 form.active {
   border: solid 2px red;
+}
+
+form input:focus:not(:focus-visible) {
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */

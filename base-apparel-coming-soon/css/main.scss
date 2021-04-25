@@ -88,10 +88,6 @@ form {
   overflow: hidden;
   margin: 0 auto 4em auto;
   input {
-    // why isnt this working??
-    &:focus:not(:focus-visible) {
-      outline: none;
-    }
     width: 100%;
     padding-left: 1em;
     color: $desaturated-red;
@@ -215,4 +211,11 @@ form {
 
 form.active {
   border: solid 2px red;
+}
+
+// get rid out outline when user is NOT using accessibility tools that it would be useful for
+form input {
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
