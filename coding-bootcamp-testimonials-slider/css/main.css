@@ -131,6 +131,15 @@ body {
   width: 20%;
 }
 
+.slider-button:hover {
+  background-color: whitesmoke;
+}
+
+.slider-button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
 .slider-container {
   display: none;
   -webkit-box-orient: vertical;
