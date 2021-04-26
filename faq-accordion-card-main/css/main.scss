@@ -30,11 +30,12 @@ body {
   flex-direction: column;
   background-image: $background-gradient;
   padding: 2rem;
-  margin-top: 10rem;
+  //   margin-top: 10rem;
+  height: 100vh;
 }
 
 .container {
-  margin: auto;
+  margin: 10em auto 0 auto;
   background-color: white;
   border-radius: 25px;
   padding: 0 1em;
@@ -68,6 +69,9 @@ li {
   border-bottom: 1px solid $light-grey-blue;
   padding: 0 0 0.5em 0;
   margin: 1em 0;
+}
+
+label {
   .answer {
     color: $dark-grey-blue;
     display: none;
@@ -79,12 +83,25 @@ li {
     img {
       margin: auto 1em auto auto;
     }
+    &:hover {
+      color: $soft-red;
+    }
   }
-  &:active {
-    // https://stackoverflow.com/questions/31178653/how-to-keep-active-css-style-after-click-a-button
+}
+
+input {
+  display: none;
+  &:checked + label {
     font-weight: 700;
     .answer {
       display: inline;
     }
+  }
+}
+
+.attribution {
+  margin: auto auto 1em auto;
+  li {
+    margin-top: 2em;
   }
 }

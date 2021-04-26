@@ -87,11 +87,11 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background-image: linear-gradient(to bottom, #af67e9, #6565e7);
   padding: 2rem;
-  margin-top: 10rem;
+  height: 100vh;
 }
 
 .container {
-  margin: auto;
+  margin: 10em auto 0 auto;
   background-color: white;
   border-radius: 25px;
   padding: 0 1em;
@@ -131,28 +131,44 @@ li {
   margin: 1em 0;
 }
 
-li .answer {
+label .answer {
   color: #787887;
   display: none;
   font-weight: 400;
 }
 
-li .question {
+label .question {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-li .question img {
+label .question img {
   margin: auto 1em auto auto;
 }
 
-li:active {
+label .question:hover {
+  color: #f47c57;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
   font-weight: 700;
 }
 
-li:active .answer {
+input:checked + label .answer {
   display: inline;
+}
+
+.attribution {
+  margin: auto auto 1em auto;
+}
+
+.attribution li {
+  margin-top: 2em;
 }
 /*# sourceMappingURL=main.css.map */
