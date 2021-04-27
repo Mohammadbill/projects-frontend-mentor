@@ -19,6 +19,9 @@ $dark-grey-blue: hsl(240, 6%, 50%);
 // Dividers
 $light-grey-blue: hsl(240, 5%, 91%);
 
+// Breakpoints
+$desktop-breakpoint: 635px;
+
 :root {
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
@@ -35,6 +38,8 @@ body {
 }
 
 .container {
+  width: 100%;
+  max-width: 35em;
   margin: 10em auto 0 auto;
   background-color: white;
   border-radius: 25px;
@@ -100,8 +105,54 @@ input {
 }
 
 .attribution {
+  color: white;
   margin: auto auto 1em auto;
   li {
     margin-top: 2em;
   }
+  a {
+    color: white;
+    font-weight: 700;
+  }
 }
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .container {
+    width: 80%;
+    max-width: 900px;
+    display: grid;
+    grid-template-areas: "image faq";
+    grid-auto-columns: 1fr 1fr;
+  }
+  h1 {
+    margin-top: 1.5em;
+    text-align: left;
+    font-size: 2.5em;
+  }
+  .image-container {
+    grid-area: image;
+    height: 100%;
+    margin: auto;
+    picture {
+      height: 100%;
+    }
+    img {
+      margin: auto;
+      transform: none;
+    }
+  }
+  .faq-container {
+    grid-area: faq;
+    padding-right: 2em;
+  }
+}
+
+// .image-container {
+//   height: 10rem;
+//   margin-right: 2rem;
+//   img {
+//     margin: auto;
+//     transform: translateY(-9em);
+//     filter: drop-shadow(0px 25px 1px rgba(101, 101, 231, 0.2));
+//   }
+// }

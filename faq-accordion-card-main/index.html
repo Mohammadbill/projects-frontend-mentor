@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -18,14 +17,20 @@
   <body>
     <div class="container">
       <div class="image-container">
-        <img
-          src="/images/illustration-woman-online-mobile.svg"
-          alt="Illustration of woman at computer standing up"
-        />
+        <picture>
+          <source
+            srcset="/images/illustration-woman-online-desktop.svg"
+            media="(min-width: 635px)"
+          />
+          <img
+            src="/images/illustration-woman-online-mobile.svg"
+            alt="Illustration of woman at computer standing up"
+          />
+        </picture>
       </div>
-      <h1>FAQ</h1>
 
       <div class="faq-container">
+        <h1>FAQ</h1>
         <ul>
           <li class="qna-container">
             <input id="question-1" type="checkbox" />
