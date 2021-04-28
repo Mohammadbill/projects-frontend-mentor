@@ -20,8 +20,10 @@
         <img src="/images/logo.svg" alt="">
       </div>
       <div class="image-container">
-        <img src="/images/hero-mobile.jpg" alt="Photo of woman infront of plant" class="image-mobile">
-        <img src="/images/hero-desktop.jpg" alt="Photo of woman infront of plant" class="image-desktop">
+        <picture>
+          <source srcset="/images/hero-desktop.jpg" media="(min-width: 800px)"/>
+          <img src="/images/hero-mobile.jpg" alt="Photo of woman infront of plant" class="image-mobile">  
+        </picture>
       </div>
       <div class="form-container">
         <h1>We're<span> coming soon</span></h1>
@@ -30,10 +32,10 @@
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form action="#" novalidate onsubmit="return false">
+        <form action="#" onsubmit="return false">
           <input type="email" placeholder="Email Address" aria-label="email"></input>
           <img src="/images/icon-error.svg" alt="" class="error-icon ">
-          <button><img src="/images/icon-arrow.svg" alt="Submit button" onclick="return validateEmail(event)"></button>
+          <button onclick="return validateEmail(event)"><img src="/images/icon-arrow.svg" alt="Submit button"></button>
         </form>
         <p class="error-message ">Please provide a valid email</p>
       </div>

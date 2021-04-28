@@ -94,21 +94,8 @@ body {
   width: 100%;
 }
 
-.image-container .image-mobile {
+.image-container img {
   width: 100vw;
-}
-
-.image-container .image-desktop {
-  display: none;
-}
-
-@media screen and (min-width: 800px) {
-  .image-container .image-desktop {
-    display: block;
-  }
-  .image-container .image-mobile {
-    display: none;
-  }
 }
 
 .form-container {
@@ -212,6 +199,8 @@ form button {
     display: -ms-grid;
     display: grid;
         grid-template-areas: "logo hero-img" "form hero-img" "foot hero-img";
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .header {
     width: 490px;
@@ -304,7 +293,12 @@ form.active {
   border: solid 2px red;
 }
 
-form input:focus:not(:focus-visible) {
-  outline: none;
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 0.25rem;
+}
+
+:focus:not(:focus-visible) {
+  outline: transparent;
 }
 /*# sourceMappingURL=main.css.map */

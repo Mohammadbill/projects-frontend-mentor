@@ -38,19 +38,8 @@ body {
 
 .image-container {
   width: 100%;
-  .image-mobile {
+  img {
     width: 100vw;
-  }
-  .image-desktop {
-    display: none;
-  }
-  @media screen and (min-width: $desktop-breakpoint) {
-    .image-desktop {
-      display: block;
-    }
-    .image-mobile {
-      display: none;
-    }
   }
 }
 .form-container {
@@ -136,7 +125,7 @@ form {
       "logo hero-img"
       "form hero-img"
       "foot hero-img";
-    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .header {
     width: 490px;
@@ -219,8 +208,11 @@ form.active {
 }
 
 // get rid out outline when user is NOT using accessibility tools that it would be useful for
-form input {
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 0.25rem;
+}
+
+:focus:not(:focus-visible) {
+  outline: transparent;
 }

@@ -20,3 +20,6 @@ function removeValidationError () {
 }
 
 let validateEmail = (event) => validateInput() ? true : event.preventDefault()
+
+// add novalidate so we can have our own custom validation
+document.querySelector('form').setAttribute('novalidate', true)
