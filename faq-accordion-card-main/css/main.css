@@ -181,8 +181,8 @@ input:checked + label .answer {
   picture {
     background-image: url(/images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-size: 120%;
-    background-position: right;
+    background-size: 100%;
+    background-position: right center;
   }
   .box {
     background: none;

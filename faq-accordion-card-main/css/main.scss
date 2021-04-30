@@ -117,8 +117,8 @@ input {
   picture {
     background-image: url(/images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-size: 120%;
-    background-position: right;
+    background-size: 100%;
+    background-position: right center;
   }
   .box {
     background: none;
@@ -157,9 +157,6 @@ input {
     overflow-x: hidden;
     scrollbar-width: auto;
     margin-bottom: 0;
-  }
-  ul {
-    // margin-bottom: 4em;
   }
 }
 
