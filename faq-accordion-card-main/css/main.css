@@ -172,6 +172,7 @@ input:checked + label .answer {
   .container {
     width: 80%;
     max-width: 900px;
+    height: 36em;
     display: -ms-grid;
     display: grid;
         grid-template-areas: "image faq";
@@ -221,9 +222,14 @@ input:checked + label .answer {
     grid-area: faq;
     padding-right: 2em;
     padding-top: 1em;
+    margin-bottom: 0;
   }
-  ul {
-    margin-bottom: 4em;
+  .faq-actual {
+    max-height: 26em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -234,7 +240,6 @@ input:checked + label .answer {
 
 .attribution ul {
   margin-top: 2em;
-  padding-top: 2em;
 }
 
 .attribution a {

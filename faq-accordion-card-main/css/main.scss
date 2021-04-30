@@ -109,6 +109,7 @@ input {
   .container {
     width: 80%;
     max-width: 900px;
+    height: 36em;
     display: grid;
     grid-template-areas: "image faq";
     grid-auto-columns: 1fr 1fr;
@@ -148,9 +149,17 @@ input {
     grid-area: faq;
     padding-right: 2em;
     padding-top: 1em;
+    margin-bottom: 0;
+  }
+  .faq-actual {
+    max-height: 26em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: auto;
+    margin-bottom: 0;
   }
   ul {
-    margin-bottom: 4em;
+    // margin-bottom: 4em;
   }
 }
 
@@ -159,7 +168,6 @@ input {
   margin: auto auto 1em auto;
   ul {
     margin-top: 2em;
-    padding-top: 2em;
   }
   a {
     color: white;
